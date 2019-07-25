@@ -1,0 +1,96 @@
+.App{
+  width:100%;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: rgba(0,0,0,.73);
+}  
+input{
+  width:300px;
+  border:none;
+  height: 29px;
+  font-size:15px;
+  padding: 10px 5px;
+  box-sizing: border-box;
+  outline: none;
+  
+  
+
+} 
+ul{
+  list-style-type: none;
+  text-align: left;
+  margin:0;
+  margin-top: 6px;
+  padding:0;   
+  border: 1px solid #e2e2e2;
+
+}
+li{
+  padding: 10px 5px;
+
+}
+ .inputRap{
+   margin:150px auto 0 auto;
+   width:334.55px;
+   height: 33px;
+   border: 1px solid #e2e2e2;
+   border-radius: 4px;
+   display: block;
+ }
+
+ .searchIcon{
+   position: relative;
+   top:5px;
+   margin-right:4px;
+   height: 23px;
+   width: 25px;
+ }
+ .showSearch{
+   font-weight: bold;
+   color: darkblue;
+ }
+ .firstLi{
+  background-color: #ccc;
+ }
+ .right{
+   float: right;
+ }
+ .plus{
+   height:10px;
+   width: 10px;
+   margin: 3px;
+ }
+ .firstListItem{
+  border-bottom: 1px solid #e2e2e2;
+ }
+ .searchListItem{
+   height:30px;
+  border-bottom:1px solid #e2e2e2; 
+ }
+ .lastListItem{
+   width: 50%;
+   color: #2b6dad;
+   background-color: #fafafa;
+    &:hover{
+      background-color: #f0eeee;
+
+    }
+
+ }
+ li:hover{
+  background-color: #fafafa;
+ }
+  #backgroundDim{
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.65); /* Black background with opacity */
+    
+  }
+
+
+
