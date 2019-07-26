@@ -72,7 +72,7 @@ renderSuggestions=()=>
       <div className="App" >
         <div id='backgroundDim' onClick={this.leaveinput} style={{display:this.state.display}}></div>
          <div className='inputRap'> 
-            <img className='searchIcon' src={searchIcon} alt='#'/>
+            <img className='searchIcon sameLine' src={searchIcon} alt='#'/>
            <input placeholder='Search' value={this.state.text} onChange={this.onTextChange} onClick={this.dimLights}  type='text'/>
            {this.renderSuggestions()}
          </div>
