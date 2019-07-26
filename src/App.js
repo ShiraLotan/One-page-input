@@ -11,20 +11,21 @@ class App extends React.Component{
 state={
   items:['Toy Story','Frozen','Mission Impossible', 'The Lion King','Spiderman','The Big Trip', 'The Humming'],
   Suggestions:[],
-  text:''
+  text:'',
+  display: 'none'
 }
 
  dimLights = () =>
 {
-  document.getElementById("backgroundDim").style.display = "block";
- 
+  this.setState({display:'block'})
 }
 
 leaveinput = ()=>
 {
-  document.getElementById("backgroundDim").style.display = "none";
   this.setState({
-    Suggestions:[]})
+    Suggestions:[],
+    display:'none'
+  })
 }
 
 onTextChange=(e)=>
@@ -61,20 +62,19 @@ renderSuggestions=()=>
   }
   return  <ul >
           <li className='firstListItem'><img className='searchIcon' src={searchIcon} alt='#'/>Search: <span className='showSearch'>{this.state.text}</span><img className='searchIcon right' src={rightArrow} alt='#'/></li>
-          {Suggestions.map((item,i)=><li className='searchListItem' onClick={()=>this.selectedValue(item)} key={i}><img className='searchIcon' src={listItem} alt='#'/>{item}<img className='searchIcon right' src={rightArrow} alt='#'/></li>)}
+          {Suggestions.map((item,i)=><li className='searchListItem' onClick={()=>{this.selectedValue(item)}}  key={i}><img className='searchIcon' src={listItem} alt='#'/>{item}<img className='searchIcon right' src={rightArrow} alt='#'/></li>)}
           <li className='lastListItem'><img  className='searchIcon plus' src={plus} alt='#'/>Add New Question</li>
           </ul> 
-  
 }
+
   render() {
     return (
       <div className="App" >
-        <div id='backgroundDim' ></div>
+        <div id='backgroundDim' onClick={this.leaveinput} style={{display:this.state.display}}></div>
          <div className='inputRap'> 
             <img className='searchIcon' src={searchIcon} alt='#'/>
-           <input placeholder='Search' value={this.state.text} onChange={this.onTextChange} onClick={this.dimLights} onBlur={this.leaveinput} type='text'/>
+           <input placeholder='Search' value={this.state.text} onChange={this.onTextChange} onClick={this.dimLights}  type='text'/>
            {this.renderSuggestions()}
-
          </div>
       </div>
     );
