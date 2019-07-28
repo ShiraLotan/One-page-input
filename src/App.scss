@@ -1,7 +1,5 @@
 .App{
   width:100%;
-  // height:1000px;
-  // padding-top:100px;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   color: rgba(0,0,0,.73);
 }  
@@ -29,7 +27,7 @@ ul{
 }
 
 li{
-  padding: 10px 5px;
+  padding: 10px 0;
   background-color: white;
   &:hover{
     background-color: #e0dddd;
@@ -49,6 +47,7 @@ li{
  .searchIcon{
    position: relative;
    top:5px;
+   padding-left:5px;
    margin-right:4px;
    height: 23px;
    width: 25px;
@@ -107,6 +106,35 @@ li{
     background-color: rgba(0,0,0,0.65); /* Black background with opacity */
     z-index: -1;
   }
-
-
+.ChatBubble{
+  border-radius: 4px;
+  width: 336.55px;
+  margin: 15px auto;
+  border: 1px solid #e2e2e2;
+  position: relative;
+}
+.ChatBubble::before{
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #e2e2e2;
+  border-top: 13px solid transparent;
+  right: 50%;
+  top: -23px;
+}
+.ChatBubble::after{
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid white;
+  border-top: 10px solid transparent;
+  right: 50%;
+  top: -18px;
+}
 

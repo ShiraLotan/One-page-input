@@ -60,7 +60,7 @@ renderSuggestions=()=>
   {
     return null;
   }
-  return  <ul >
+  return  <ul className='ChatBubble'>
           <li className='firstListItem'><img className='searchIcon' src={searchIcon} alt='#'/>Search: <span className='showSearch'>{this.state.text}</span><img className='searchIcon right' src={rightArrow} alt='#'/></li>
           {Suggestions.map((item,i)=><li className='searchListItem' onClick={()=>{this.selectedValue(item)}}  key={i}><img className='searchIcon' src={listItem} alt='#'/>{item}<img className='searchIcon right' src={rightArrow} alt='#'/></li>)}
           <li className='lastListItem'><img  className='searchIcon plus' src={plus} alt='#'/>Add New Question</li>
