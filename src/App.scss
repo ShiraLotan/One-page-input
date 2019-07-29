@@ -1,6 +1,11 @@
+$border-color: #e2e2e2;
+$text-blue-color: #2b6dad;
+$ul_background_color: white;
+$input_And_ul_width: 334.55px;
+$font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 .App{
   width:100%;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family:$font-family;
   color: rgba(0,0,0,.73);
 }  
 
@@ -20,15 +25,15 @@ ul{
   margin:0;
   margin-top: 6px;
   padding:0;   
-  border: 1px solid #e2e2e2;
-  background-color: white;
+  border: 1px solid $border-color;
+  background-color: $ul_background_color;
   border-radius: 4px;
 
 }
 
 li{
   padding: 10px 0;
-  background-color: white;
+  background-color: $ul_background_color;
   &:hover{
     background-color: #e0dddd;
     cursor: pointer;
@@ -37,9 +42,9 @@ li{
 
  .inputRap{
    margin:150px auto 0 auto;
-   width:334.55px;
+   width:$input_And_ul_width;
    height: 33px;
-   border: 1px solid #e2e2e2;
+   border: 1px solid $border-color;
    border-radius: 4px;
    background-color: white;
  }
@@ -70,24 +75,21 @@ li{
    float: right;
  }
 
- .plus{
-   padding-bottom: 2.5px;
-   height:10px;
-   width: 10px;
-   margin: 3px;
- }
-
  .firstListItem{
-  border-bottom: 1px solid #e2e2e2;
+  border-bottom: 1px solid $border-color;
  }
 
  .searchListItem{
    height:30px;
-  border-bottom:1px solid #e2e2e2; 
+  border-bottom:1px solid $border-color; 
+  &:hover{
+    color: $text-blue-color;
+  }
  }
 
  .lastListItem{
    width: 50%;
+   padding-left:5px;
    color: #2b6dad;
    background-color: #fafafa;
     &:hover{
@@ -108,9 +110,9 @@ li{
   }
 .ChatBubble{
   border-radius: 4px;
-  width: 336.55px;
+  width: $input_And_ul_width;
   margin: 15px auto;
-  border: 1px solid #e2e2e2;
+  border: 1px solid $border-color;
   position: relative;
 }
 .ChatBubble::before{
@@ -120,7 +122,7 @@ li{
   position: absolute;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-bottom: 10px solid #e2e2e2;
+  border-bottom: 10px solid $border-color;
   border-top: 13px solid transparent;
   right: 50%;
   top: -23px;

@@ -3,7 +3,6 @@ import './App.scss';
 import searchIcon from '../src/img/search.png';
 import listItem from '../src/img/listItem.jpg';
 import rightArrow from '../src/img/rightSideArrow.png';
-import plus from '../src/img/Plus.png';
 
 
 
@@ -63,7 +62,7 @@ renderSuggestions=()=>
   return  <ul className='ChatBubble'>
           <li className='firstListItem'><img className='searchIcon' src={searchIcon} alt='#'/>Search: <span className='showSearch'>{this.state.text}</span><img className='searchIcon right' src={rightArrow} alt='#'/></li>
           {Suggestions.map((item,i)=><li className='searchListItem' onClick={()=>{this.selectedValue(item)}}  key={i}><img className='searchIcon' src={listItem} alt='#'/>{item}<img className='searchIcon right' src={rightArrow} alt='#'/></li>)}
-          <li className='lastListItem'><img  className='searchIcon plus' src={plus} alt='#'/>Add New Question</li>
+          <li className='lastListItem'>+ Add New Question</li>
           </ul> 
 }
 
